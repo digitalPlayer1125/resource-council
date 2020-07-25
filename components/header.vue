@@ -11,7 +11,7 @@
                             </a>
                         </li>
                     </ul>
-                    <ul class="list-unstyled" style="width: 90px;">
+                    <ul class="list-unstyled" style="width: 100px;">
                         <li class="d-flex align-items-center justify-content-between">
                             <a aria-label="twitter resource council" rel="noopener noreferrer" href="https://twitter.com/hcd_IIITD" class="text-decoration-none" target="_blank">
                                 <svg viewBox="0 0 24 24" style="height: 23px; width: 23px;">

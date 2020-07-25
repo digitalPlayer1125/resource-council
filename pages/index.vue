@@ -1,8 +1,7 @@
 <template>
   <div class="d-flex flex-column">
     <Header />
-    <Cover image='https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1113&q=80' page-desc='RESOURCE COUNCIL' />
-    
+    <Cover image='https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1113&q=80' page-desc='RESOURCE COUNCIL' />    
     <div class="py-5 d-flex flex-row flex-wrap" style="position: relative; overflow: hidden;">
       <img src="/polyLight.png" style="position: absolute; top: 0; right: 0; height: 350px;">
       <img src="/polyDark.png" style="position: absolute; left: 0; bottom: 0; height: 350px;">
@@ -11,9 +10,11 @@
           Projects
         </h2>
         <hr class="bg--green" style="height: 0.5px; width: 190px;" />
-        <button class="mt-3 btn btn-lg bg--green text-white font-weight-bold rounded-0" style="width: 190px;">
-          View All
-        </button>
+        <nuxt-link to='/projects'>
+          <button class="mt-3 btn btn-lg bg--green text-white font-weight-bold rounded-0" style="width: 190px;">
+            View All
+          </button>
+        </nuxt-link>
       </div>
       <div class="mt-5 mt-md-0 px-md-5 col-md-8 d-flex flex-column flex-md-row">
         <div v-bind:class="0%2!=0 ? 'order-lg-1' : 'order-lg-0'" class="order-0 col-lg-9">
@@ -34,13 +35,15 @@
       </div>
     </div>
 
-    <div class="py-5 d-flex flex-row flex-wrap">
+    <div class="py-5 d-flex flex-row flex-wrap" style="position: relative; overflow: hidden;">
+      <img src="/polyLight.png" style="position: absolute; top: 0; right: 0; height: 350px;">
+      <img src="/polyDark.png" style="position: absolute; left: 0; bottom: 0; height: 350px;">
       <div class="order-1 order-md-0 mt-5 mt-md-0 px-md-5 col-md-8 d-flex flex-column flex-md-row">
         <div v-bind:class="0%2!=0 ? 'order-lg-1' : 'order-lg-0'" class="order-0 col-lg-9">
           <img class="w-100 shadow rounded-lg" src="/talks.png">
         </div>
         <div :class="0%2==0 ? 'order-lg-1' : 'order-lg-0'" class="order-1 col-lg">
-          <div class="w-100 h-100 d-lg-none border p-4">
+          <div class="bg-white w-100 h-100 d-lg-none border p-4">
             <p class="d-block d-lg-none mt-1 text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
             </p>
@@ -53,32 +56,38 @@
         </div>
       </div>
       <div class="order-0 order-md-1 d-flex flex-column w-100 h-100 col-md-4 align-items-center">
-        <h2 class="h1 text-uppercase text-dark font-weight-bold">
+        <h2 class="h1 text-center text-uppercase text-dark font-weight-bold">
           Resource Talks
         </h2>
         <hr class="bg--green" style="height: 0.5px; width: 190px;" />
-        <button class="mt-3 btn btn-lg bg--green text-white font-weight-bold rounded-0" style="width: 190px;">
-          View All
-        </button>
+        <nuxt-link to='/resource-talks'>
+          <button class="mt-3 btn btn-lg bg--green text-white font-weight-bold rounded-0" style="width: 190px;">
+            View All
+          </button>
+        </nuxt-link>
       </div>
     </div>
 
-    <div class="py-5 d-flex flex-row flex-wrap">
+    <div class="py-5 d-flex flex-row flex-wrap" style="position: relative; overflow: hidden;">
+      <img src="/polyLight.png" style="position: absolute; top: 0; right: 0; height: 350px;">
+      <img src="/polyDark.png" style="position: absolute; left: 0; bottom: 0; height: 350px;">
       <div class="d-flex flex-column w-100 h-100 col-md-4 align-items-center">
         <h2 class="h1 text-uppercase text-dark font-weight-bold">
           Volunteer
         </h2>
         <hr class="bg--green" style="height: 0.5px; width: 190px;" />
-        <button class="mt-3 btn btn-lg bg--green text-white font-weight-bold rounded-0" style="width: 190px;">
-          Know More
-        </button>
+        <nuxt-link to='/volunteer'>
+          <button class="mt-3 btn btn-lg bg--green text-white font-weight-bold rounded-0" style="width: 190px;">
+            Know More
+          </button>
+        </nuxt-link>
       </div>
       <div class="mt-5 mt-md-0 px-md-5 col-md-8 d-flex flex-column flex-md-row">
         <div v-bind:class="0%2!=0 ? 'order-lg-1' : 'order-lg-0'" class="order-0 col-lg-9">
           <img class="w-100 shadow rounded-lg" src="/volunteer.png">
         </div>
         <div :class="0%2==0 ? 'order-lg-1' : 'order-lg-0'" class="order-1 col-lg">
-          <div class="w-100 h-100 d-lg-none border p-4">
+          <div class="bg-white w-100 h-100 d-lg-none border p-4">
             <p class="d-block d-lg-none mt-1 text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
             </p>
@@ -92,13 +101,15 @@
       </div>
     </div>
     
-    <div class="py-5 d-flex flex-row flex-wrap">
+    <div class="py-5 d-flex flex-row flex-wrap" style="position: relative; overflow: hidden;">
+      <img src="/polyLight.png" style="position: absolute; top: 0; right: 0; height: 350px;">
+      <img src="/polyDark.png" style="position: absolute; left: 0; bottom: 0; height: 350px;">
       <div class="order-1 order-md-0 mt-5 mt-md-0 px-md-5 col-md-8 d-flex flex-column flex-md-row">
         <div v-bind:class="0%2!=0 ? 'order-lg-1' : 'order-lg-0'" class="order-0 col-lg-9">
           <img class="w-100 shadow rounded-lg" src="/donate.png">
         </div>
         <div :class="0%2==0 ? 'order-lg-1' : 'order-lg-0'" class="order-1 col-lg">
-          <div class="w-100 h-100 d-lg-none border p-4">
+          <div class="bg-white w-100 h-100 d-lg-none border p-4">
             <p class="d-block d-lg-none mt-1 text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
             </p>
@@ -115,9 +126,11 @@
           Donate
         </h2>
         <hr class="bg--green" style="height: 0.5px; width: 190px;" />
-        <button class="mt-3 btn btn-lg bg--green text-white font-weight-bold rounded-0" style="width: 190px;">
-          Donate
-        </button>
+        <nuxt-link to='/help-us'>
+          <button class="mt-3 btn btn-lg bg--green text-white font-weight-bold rounded-0" style="width: 190px;">
+            Donate
+          </button>
+        </nuxt-link>
       </div>
     </div>
 

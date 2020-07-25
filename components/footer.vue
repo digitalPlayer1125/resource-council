@@ -65,7 +65,7 @@
               </a>
             </li>
             <!-- <li class="list-inline-item list-social-item">
-              <a aria-label="LinkedIn-Resource-Council" class="text-decoration-none" href="https://www.linkedin.com/company/wellowise/" rel="noopener">
+              <a aria-label="LinkedIn-Resource-Council" class="text-decoration-none" href="https://www.linkedin.com/company/Resource Council/" rel="noopener">
                 <svg
                   aria-hidden="true"
                   class="text-dark"
@@ -95,7 +95,7 @@
               </nuxt-link>
             </li>
             <li class="mb-3">
-              <nuxt-link class="text-dark f_400" to="/talks">
+              <nuxt-link class="text-dark f_400" to="/resource-talks">
                 Resource Talks
               </nuxt-link>
             </li>
@@ -133,8 +133,8 @@
               <iframe
                 id="maplink"
                 allowfullscreen=""
-                class="rounded-lg"
-                aria-label="Google Map wellOwise"
+                class="shadow rounded-lg"
+                aria-label="Google Map Resource Council"
                 frameborder="0"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14004.90469317851!2d77.3022868!3d28.6529458!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xefeddc167e7e0135!2sRESOURCE%20COUNCIL!5e0!3m2!1sen!2sin!4v1595600856604!5m2!1sen!2sin"
                 style="border:0; height: 200px; width: 100%;"
