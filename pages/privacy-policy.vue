@@ -1,5 +1,6 @@
 <template>
   <div class="text-muted d-flex flex-column">
+    <Header />
     <div class="container p-3">
       <h1 class="text--green">
         Privacy Policy for Resource Council
