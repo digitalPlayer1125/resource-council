@@ -3,7 +3,7 @@
     <Cover page-desc="Blogs" image="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" />
     <div class="container">
       <div class="d-flex flex-row flex-wrap">
-        <nuxt-link v-for="blog in posts" :key="blog.createdAt" :to="&quot;/blogs/&quot;+blog.slug" class="col-12 col-sm-6 col-lg-4 mt-5">
+        <nuxt-link v-for="(blog, i) in posts" :key="i" :to="&quot;/blogs/&quot;+blog.slug" class="col-12 col-sm-6 col-lg-4 mt-5">
           <div class="animated fadeIn d-flex flex-column h-100 align-items-stretch border rounded-lg" onmouseout="this.classList.remove(&quot;shadow-sm&quot;)" onmouseover="this.classList.add(&quot;shadow-sm&quot;)">
             <img class="rounded-top w-100" :src="blog.image1">
             <div class="p-3 d-flex flex-column h-100 w-100 rounded-bottom">
@@ -44,7 +44,7 @@
 <script>
 export default {
   async asyncData () {
-    const posts = await fetch('http://localhost:3000/blogs.json')
+    const posts = await fetch('http://localhost:3000/_content')
       .then(r => r.json())
     return {
       posts
