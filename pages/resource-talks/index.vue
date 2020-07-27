@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex flex-column">
     <Header />
-    <Cover cDesc='“Today a reader, tomorrow a leader.” – Margaret Fuller' page-desc="Blogs" image="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" />
+    <Cover cDesc='Human resources is a huge part of what makes businesses work.' page-desc="Resource Talks" image="https://images.unsplash.com/photo-1500829243541-74b677fecc30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80" />
     <div class="container">
       <div class="d-flex flex-column align-items-center">
         <nuxt-link v-for="(blog, i) in posts" :key="i" :to="&quot;/blogs/&quot;+blog.slug" v-bind:class="i==0 ? '' : 'mt-5'" class="px-md-5 col-lg-9 d-flex flex-column flex-md-row">
@@ -56,7 +56,7 @@
 <script>
 export default {
   async asyncData({ $content, params }) {
-    const posts = await $content('articles', params.slug)
+    const posts = await $content('resourceTalks', params.slug)
       .only(['title', 'image1', 'slug', 'author', 'tags', 'intro'])
       .sortBy('createdAt', 'desc')
       .fetch()
@@ -72,10 +72,10 @@ export default {
   },
   head () {
     return {
-      title: 'Blogs | Resource Council',
+      title: 'Resource Talks | Resource Council',
       meta: [
-        { hid: 'description', name: 'description', content: 'Blogs | Resource Council' },
-        { hid: 'og:description', name: 'og:description', content: 'Blogs | Resource Council' }
+        { hid: 'description', name: 'description', content: 'Resource Talks | Resource Council' },
+        { hid: 'og:description', name: 'og:description', content: 'Resource Talks | Resource Council' }
       ]
     }
   }

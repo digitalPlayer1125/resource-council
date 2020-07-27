@@ -1,5 +1,5 @@
 <template>
-    <nav class="sticky-top shadow" style="background: rgb(222, 242, 241);">
+    <nav class="sticky-top shadow" style="background: rgb(222, 242, 241); height: 90px;">
         <div class="py-1 container-fluid">
             <div class="container">
                 <div class="row px-md-4 d-md-flex align-items-center justify-content-between" style="height: 30px;">

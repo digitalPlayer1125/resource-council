@@ -8,12 +8,12 @@
       <img src="/polyLight.png" style="position: absolute; left: 0; bottom: 0; height: 350px;">
       <div class="d-flex flex-column w-100 h-100 col-md-4 align-items-center">
         <h2 class="h1 text-uppercase text-dark font-weight-bold section">
-          Projects
+          About Us
         </h2>
         <hr class="bg--green" style="height: 0.5px; width: 190px;" />
-        <nuxt-link to='/projects'>
+        <nuxt-link to='/about'>
           <button class="border-white mt-3 btn btn-lg bg--green text-white font-weight-bold rounded-0" style="width: 190px;">
-            View All
+            Know More
           </button>
         </nuxt-link>
       </div>
@@ -142,7 +142,7 @@
 <script>
 export default {
   head: {
-    title: 'Resource Council | Tagline Here'
+    title: 'Resource Council | Moving towards Zero Resource Wastage'
   },
   methods: {
     handleScroll (event) {

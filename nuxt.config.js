@@ -1,4 +1,3 @@
-
 export default {
   /*
   ** Nuxt rendering mode
@@ -19,8 +18,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'apple-mobile-web-app-title', name: 'apple-mobile-web-app-title', content: 'Resource Council | Moving towards Zero Resource Wastage' },
+      { hid: 'og:title', name: 'og:title', content: 'Resource Council | Moving towards Zero Resource Wastage' },
       { hid: 'description', name: 'description', content: 'We are an NGO working towards spreading awareness about the impact of resource wastage and trying to bring about a change by utilizing the existing resources to their full capacity.' },
-      { hid: 'og:description', name: 'og:description', content: 'We are an NGO working towards spreading awareness about the impact of resource wastage and trying to bring about a change by utilizing the existing resources to their full capacity.' }
+      { hid: 'og:description', name: 'og:description', content: 'We are an NGO working towards spreading awareness about the impact of resource wastage and trying to bring about a change by utilizing the existing resources to their full capacity.' },
+      { hid: 'og:site_name', name: 'og:site_name', content: 'Resource Council | Moving towards Zero Resource Wastage' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/logo.svg' },
