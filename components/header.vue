@@ -54,12 +54,12 @@
                 </div>
             </div>
         </div>
-        <div class="py-1 container-fluid container-sm d-flex align-items-center justify-content-between shadow bg-white rounded-lg py-2">
+        <div class="container-fluid container-sm d-flex align-items-center justify-content-between shadow bg-white rounded-lg py-2">
             <nuxt-link class="d-flex align-items-center" to='/'>
                 <img src="/logo.svg" style="height: 50px;">
                 <span class="text-dark ml-1 font-weight-bold" style="font-size: 20px;">Resource Council</span>
             </nuxt-link>
-            <a class="d-block d-md-none" @click="toggleSidebar()">
+            <a class="d-block d-md-none" @click="openBar=!openBar">
                 <svg style="height: 20px;" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-bars fa-w-14 fa-2x"><path fill="currentColor" d="M442 114H6a6 6 0 0 1-6-6V84a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6zm0 160H6a6 6 0 0 1-6-6v-24a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6zm0 160H6a6 6 0 0 1-6-6v-24a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6z" class=""></path></svg>
             </a>
             <div class="d-none d-md-flex">
@@ -90,12 +90,43 @@
                 </nuxt-link>
             </div>
         </div>
+        <div v-if='openBar' class="text-uppercase container-fluid container-sm d-flex d-md-none flex-column align-items-center shadow-sm bg-white rounded-lg py-2">
+            <nuxt-link class="mt-3 d-flex align-items-center" to='/about'>
+                <span @click="openBar=!openBar" class="text-dark" style="font-size: 18px;">
+                    About
+                </span>
+            </nuxt-link>
+            <!-- <nuxt-link class="d-flex align-items-center" to='/projects'>
+                <span class="ml-3 text-dark" style="font-size: 18px;">
+                    Projects
+                </span>
+            </nuxt-link> -->
+            <nuxt-link class="mt-3 d-flex align-items-center" to='/resource-talks'>
+                <span class="text-dark" style="font-size: 18px;">
+                    Resource Talks
+                </span>
+            </nuxt-link>
+            <nuxt-link class="mt-3 d-flex align-items-center" to='/help-us'>
+                <span class="text-dark" style="font-size: 18px;">
+                    Help Us
+                </span>
+            </nuxt-link>
+            <nuxt-link class="my-3 d-flex align-items-center" to='/blogs'>
+                <span class="text-dark" style="font-size: 18px;">
+                    Blogs
+                </span>
+            </nuxt-link>
+        </div>
     </nav>
 </template>
 
 <script>
 export default {
-
+    data(){
+        return {
+            openBar: false
+        }
+    }
 }
 </script>
 

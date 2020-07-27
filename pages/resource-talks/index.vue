@@ -4,7 +4,7 @@
     <Cover cDesc='Human resources is a huge part of what makes businesses work.' page-desc="Resource Talks" image="https://images.unsplash.com/photo-1500829243541-74b677fecc30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80" />
     <div class="container">
       <div class="d-flex flex-column align-items-center">
-        <nuxt-link v-for="(blog, i) in posts" :key="i" :to="&quot;/blogs/&quot;+blog.slug" v-bind:class="i==0 ? '' : 'mt-5'" class="px-md-5 col-lg-9 d-flex flex-column flex-md-row">
+        <nuxt-link v-for="(blog, i) in posts" :key="i" :to="&quot;/resource-talks/&quot;+blog.slug" v-bind:class="i==0 ? '' : 'mt-5'" class="px-md-5 col-lg-9 d-flex flex-column flex-md-row">
           <div v-bind:class="i%2!=0 ? 'order-lg-1' : 'order-lg-0'" class="order-0 col-lg-9">
             <img class="w-100 rounded-top" :src="blog.image1">
           </div>
