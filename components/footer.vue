@@ -11,7 +11,7 @@
           </p>
           <ul class="list-unstyled list-inline list-social mb-4 mb-md-0">
             <li class="list-inline-item list-social-item mr-3">
-              <a aria-label="Twitter-Resource-Council" class="text-decoration-none" href="https://twitter.com/resourcecouncil/" rel="noopener">
+              <a aria-label="Twitter-Resource-Council" class="text-decoration-none" href="https://twitter.com/resourcecouncil/" rel="noopener" target="_blank">
                 <svg
                   aria-hidden="true"
                   class="text-dark"
@@ -29,7 +29,7 @@
               </a>
             </li>
             <li class="list-inline-item list-social-item mr-3">
-              <a aria-label="Facebook-Resource-Council" class="text-decoration-none" href="https://www.facebook.com/Resource-Council-243508099698839/" rel="noopener">
+              <a aria-label="Facebook-Resource-Council" class="text-decoration-none" href="https://www.facebook.com/Resource-Council-243508099698839/" rel="noopener" target="_blank">
                 <svg
                   aria-hidden="true"
                   class="text-dark"
@@ -47,7 +47,7 @@
               </a>
             </li>
             <li class="list-inline-item list-social-item mr-3">
-              <a aria-label="Instagram-Resource-Council" class="text-decoration-none" href="https://www.instagram.com/resourcecouncil/" rel="noopener">
+              <a aria-label="Instagram-Resource-Council" class="text-decoration-none" href="https://www.instagram.com/resourcecouncil/" rel="noopener" target="_blank">
                 <svg
                   aria-hidden="true"
                   class="text-dark"

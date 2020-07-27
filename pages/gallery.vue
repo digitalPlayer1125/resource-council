@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex flex-column">
     <Header />
-    <Cover page-desc="Gallery" image="https://images.unsplash.com/photo-1534531688091-a458257992cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" />
+    <Cover cDesc='“A goal without a plan is just a wish.” ― Antoine de Saint-Exupéry' page-desc="Gallery" image="https://images.unsplash.com/photo-1534531688091-a458257992cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" />
     <div class="d-flex flex-row flex-wrap">
       <div v-for="(image, i) in images" :key="i" :class='i<=2 ? "mt-lg-0" : ""' class="mt-5 col-sm-6 col-lg-4 px-5">
         <div class="animated fadeIn w-100 h-100 rounded-lg shadow" :style="{ 'background-image': 'linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' + image.value + ')' }" style="background-size: cover; background-repeat: no-repeat; padding-top: 100px; padding-bottom: 100px; background-size: cover; background-position: center center;">

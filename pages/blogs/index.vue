@@ -18,7 +18,7 @@
               <p class="d-block d-lg-none mt-1 text-secondary">
                 {{ blog.author }}
               </p>
-              <p style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;" class="d-block d-lg-none mt-1 text-secondary">
+              <p style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;" class="d-lg-none mt-1 text-secondary">
                 {{ blog.intro }}
               </p>
               <div class="d-block d-lg-none mt-auto d-flex flex-row flex-wrap">
