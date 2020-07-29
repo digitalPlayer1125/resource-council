@@ -64,7 +64,7 @@
             </a>
             <div class="d-none d-md-flex">
                 <nuxt-link class="d-flex align-items-center" to='/about'>
-                    <span class="text-dark" style="font-size: 18px;">
+                    <span :class='navSel==1 ? "border-bottom border-dark" : ""' class="text-dark" style="font-size: 18px;">
                         About
                     </span>
                 </nuxt-link>
@@ -74,17 +74,17 @@
                     </span>
                 </nuxt-link> -->
                 <nuxt-link class="d-flex align-items-center" to='/resource-talks'>
-                    <span class="ml-3 text-dark" style="font-size: 18px;">
+                    <span :class='navSel==2 ? "border-bottom border-dark" : ""' class="ml-3 text-dark" style="font-size: 18px;">
                         Resource Talks
                     </span>
                 </nuxt-link>
                 <nuxt-link class="d-flex align-items-center" to='/help-us'>
-                    <span class="ml-3 text-dark" style="font-size: 18px;">
+                    <span :class='navSel==3 ? "border-bottom border-dark" : ""' class="ml-3 text-dark" style="font-size: 18px;">
                         Help Us
                     </span>
                 </nuxt-link>
                 <nuxt-link class="d-flex align-items-center" to='/blogs'>
-                    <span class="ml-3 text-dark" style="font-size: 18px;">
+                    <span :class='navSel==4 ? "border-bottom border-dark" : ""' class="ml-3 text-dark" style="font-size: 18px;">
                         Blogs
                     </span>
                 </nuxt-link>
@@ -92,7 +92,7 @@
         </div>
         <div v-if='openBar' class="text-uppercase container-fluid container-sm d-flex d-md-none flex-column align-items-center shadow-sm bg-white rounded-lg py-2">
             <nuxt-link class="mt-3 d-flex align-items-center" to='/about'>
-                <span @click="openBar=!openBar" class="text-dark" style="font-size: 18px;">
+                <span :class='navSel==1 ? "border-bottom border-dark" : ""' @click="openBar=!openBar" class="text-dark" style="font-size: 18px;">
                     About
                 </span>
             </nuxt-link>
@@ -102,17 +102,17 @@
                 </span>
             </nuxt-link> -->
             <nuxt-link class="mt-3 d-flex align-items-center" to='/resource-talks'>
-                <span class="text-dark" style="font-size: 18px;">
+                <span :class='navSel==2 ? "border-bottom border-dark" : ""' class="text-dark" style="font-size: 18px;">
                     Resource Talks
                 </span>
             </nuxt-link>
             <nuxt-link class="mt-3 d-flex align-items-center" to='/help-us'>
-                <span class="text-dark" style="font-size: 18px;">
+                <span :class='navSel==3 ? "border-bottom border-dark" : ""' class="text-dark" style="font-size: 18px;">
                     Help Us
                 </span>
             </nuxt-link>
             <nuxt-link class="my-3 d-flex align-items-center" to='/blogs'>
-                <span class="text-dark" style="font-size: 18px;">
+                <span :class='navSel==4 ? "border-bottom border-dark" : ""' class="text-dark" style="font-size: 18px;">
                     Blogs
                 </span>
             </nuxt-link>
@@ -124,8 +124,22 @@
 export default {
     data(){
         return {
-            openBar: false
+            openBar: false,
+            navSel: 1
         }
+    },
+    mounted(){
+        try{
+            if (window.location.href.indexOf("/about") != -1)
+                this.navSel= 1;
+            else if (window.location.href.indexOf("/resource-talks") != -1)
+                this.navSel= 2;
+            else if (window.location.href.indexOf("/help-us") != -1)
+                this.navSel= 3;
+            else if (window.location.href.indexOf("/blogs") != -1)
+                this.navSel= 4;
+        }
+        catch{}
     }
 }
 </script>

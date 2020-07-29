@@ -1,8 +1,8 @@
 <template>
   <div class="d-flex flex-column">
     <Header />
-    <div class="animated fadeIn d-flex flex-row justify-content-center">
-      <div class="blogContent p-3" style="max-width: 699px;">
+    <div class="d-flex flex-row justify-content-center">
+      <div class="mt-3 blogContent p-3" style="max-width: 699px;">
         <h1 style="line-height: 1.4 !important;" class="mt-2 text--green font-weight-light">
           {{ article.title }}
         </h1>
@@ -18,6 +18,21 @@
         <span v-for="tags in article.tags.split(&quot;,&quot;)" :key="tags" style="font-size: 15px;" class="btn btn-md border rounded-lg mr-2 text-muted">
           {{ tags.trim() }}
         </span>
+        <h4 class="ml-2 mt-5 text-dark" v-if='prev || next'> Read more from our curated collection </h4>
+        <div class="d-flex flex-row flex-wrap justify-content-between">
+          <nuxt-link v-if='prev' class="col p-2 mt-3 text-secondary d-flex flex-column align-items-start justify-content-start" :to='prev.slug'>
+            <img class="rounded-lg w-100" style="max-width: 317px !important;" :src="prev.image1">
+            <p class="mt-3" style='font-size: 20px;'>
+              &larr; {{prev.title}}
+            </p>
+          </nuxt-link>
+          <nuxt-link v-if='next' class="col p-2 mt-3 text-secondary d-flex flex-column align-items-start justify-content-start" :to='next.slug'>
+            <img class="rounded-lg w-100" style="max-width: 317px !important;" :src="next.image1">
+            <p class="mt-3" style='font-size: 20px;'>
+              {{next.title}} &rarr;
+            </p>
+          </nuxt-link>
+        </div>
       </div>
     </div>
     <Footer class="mt-5" />
@@ -29,7 +44,7 @@ export default {
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
     const [prev, next] = await $content('articles')
-      .only(['title', 'slug'])
+      .only(['title', 'slug', 'image1'])
       .sortBy('createdAt', 'asc')
       .surround(params.slug)
       .fetch()

@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex flex-column">
     <Header />
-    <div class="animated fadeIn d-flex flex-row justify-content-center">
+    <div class="animate__animated animate__fadeIn d-flex flex-row justify-content-center">
       <div class="blogContent p-3" style="max-width: 699px;">
         <h1 style="line-height: 1.4 !important;" class="mt-2 text--green font-weight-light">
           {{ article.title }}

@@ -4,12 +4,12 @@
     <Cover cDesc='“Today a reader, tomorrow a leader.” – Margaret Fuller' page-desc="Blogs" image="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" />
     <div class="container">
       <div class="d-flex flex-column align-items-center">
-        <nuxt-link v-for="(blog, i) in posts" :key="i" :to="&quot;/blogs/&quot;+blog.slug" v-bind:class="i==0 ? '' : 'mt-5'" class="px-md-5 col-lg-9 d-flex flex-column flex-md-row">
+        <nuxt-link v-for="(blog, i) in posts" :key="i" :to="&quot;/blogs/&quot;+blog.slug" v-bind:class="i==0 ? '' : 'hideme mt-5'" class="px-md-5 col-lg-9 d-flex flex-column flex-md-row">
           <div v-bind:class="i%2!=0 ? 'order-lg-1' : 'order-lg-0'" class="order-0 col-lg-9">
-            <img class="w-100 rounded-top" :src="blog.image1">
+            <img class="w-100 rounded-lg" :src="blog.image1">
           </div>
           <div :class="i%2==0 ? 'order-lg-1' : 'order-lg-0'" class="order-1 col-lg">
-            <div class="w-100 h-100 d-lg-none border p-4">
+            <div class="w-100 h-100 d-lg-none border-0 mt-2 p-2">
               <div class="d-flex d-lg-none flex-column flex-lg-row">
                 <span class="text-dark h5">
                   {{ blog.title }}
@@ -67,7 +67,8 @@ export default {
   data () {
     return {
       posts: [],
-      mouse: false
+      mouse: false,
+      animateSide: 0
     }
   },
   head () {
@@ -78,6 +79,42 @@ export default {
         { hid: 'og:description', name: 'og:description', content: 'Blogs | Resource Council' }
       ]
     }
+  },
+  methods: {
+    hidemeControl(){
+      try{
+        $('.hideme').each((i)=>{
+          var docViewTop = $(window).scrollTop();
+          var docViewBottom = docViewTop + $(window).height();
+          var elemTop = $(this).offset().top;
+          var elemBottom = elemTop + $(this).height();
+          if ((elemTop <= docViewBottom) && (elemTop >= docViewTop)){
+            $(this).addClass('animate__animated ' + (this.animateSide%2==0 ? 'animate__backInLeft': 'animate__backInRight'));
+            $(this).removeClass('hideme');
+            this.animateSide++;
+          }
+          console.log(this.animateSide);
+        });
+      }
+      catch{
+        $('.hideme').each(function(i){
+          $(this).addClass('animate__animated animate_faster ' + (i%2==0 ? 'animate__backInRight': 'animate__backInLeft'));
+          $(this).removeClass('hideme');
+        });
+      }
+    },
+    handleScroll (event) {
+      this.hidemeControl();
+    }
+  },
+  mounted(){
+    window.addEventListener('scroll', this.handleScroll);
+    let recaptchaScript = document.createElement('script');
+    recaptchaScript.setAttribute('src', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js');
+    document.head.appendChild(recaptchaScript);
+  },
+  destroyed(){
+    window.removeEventListener('scroll', this.handleScroll);
   }
 }
 </script>
