@@ -96,11 +96,6 @@
                     About
                 </span>
             </nuxt-link>
-            <!-- <nuxt-link class="d-flex align-items-center" to='/projects'>
-                <span class="ml-3 text-dark" style="font-size: 18px;">
-                    Projects
-                </span>
-            </nuxt-link> -->
             <nuxt-link class="mt-3 d-flex align-items-center" to='/resource-talks'>
                 <span :class='navSel==2 ? "border-bottom border-dark" : ""' class="text-dark" style="font-size: 18px;">
                     Resource Talks
@@ -138,6 +133,8 @@ export default {
                 this.navSel= 3;
             else if (window.location.href.indexOf("/blogs") != -1)
                 this.navSel= 4;
+            else
+                this.navSel= 0;
         }
         catch{}
     }

@@ -10,9 +10,6 @@
           {{ article.intro }}
         </h5>
         <img class="w-100 mt-4 rounded-lg shadow" :src="article.image1">
-        <h5 class="mt-5 text-secondary">
-          {{ article.description }}
-        </h5>
         <nuxt-content class="mt-5" :document="article" />
         <div class="mt-5" style="/*background: #65656565; height: 0.5px;*/" />
         <span v-for="tags in article.tags.split(&quot;,&quot;)" :key="tags" style="font-size: 15px;" class="btn btn-md border rounded-lg mr-2 text-muted">

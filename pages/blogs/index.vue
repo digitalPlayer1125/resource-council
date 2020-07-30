@@ -75,8 +75,13 @@ export default {
     return {
       title: 'Blogs | Resource Council',
       meta: [
-        { hid: 'description', name: 'description', content: 'Blogs | Resource Council' },
-        { hid: 'og:description', name: 'og:description', content: 'Blogs | Resource Council' }
+        { hid: 'og:url', property: 'og:url', name: 'og:url', content: 'https://resource-council.vercel.app/blogs' },
+        { hid: 'og:title', property: 'og:title', name: 'og:title', content: 'Blogs | Resource Council' },
+        { hid: 'og:description', property: 'og:description', name: 'og:description', content: 'The environment is where we all meet; where we all have a mutual interest; it is the one thing all of us share. ~  Lady Bird Johnson' },
+        { hid: 'og:image', property: 'og:image', name: 'og:image', content: 'https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80' },
+        { hid: 'twitter:title', property: 'twitter:title', name: 'twitter:title', content: 'Blogs | Resource Council' },
+        { hid: 'twitter:description', property: 'twitter:description', name: 'twitter:description', content: 'The environment is where we all meet; where we all have a mutual interest; it is the one thing all of us share. ~  Lady Bird Johnson' },
+        { hid: 'twitter:image', property: 'twitter:image', name: 'twitter:image', content: 'https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80' }
       ]
     }
   },

@@ -104,11 +104,6 @@
                 Support Us
               </nuxt-link>
             </li>
-            <li class="mb-3">
-              <nuxt-link class="text-dark f_400" to="/gallery">
-                Gallery
-              </nuxt-link>
-            </li>
             <li class="mb-0">
               <nuxt-link class="text-dark f_400" to="/blogs">
                 Blogs

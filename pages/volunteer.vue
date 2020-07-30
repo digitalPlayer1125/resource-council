@@ -50,6 +50,18 @@ export default {
             position: '',
             reason: ''
         }
+    },
+    head: {
+        title: 'Volunteer | Resource Council',
+        meta: [
+            { hid: 'og:url', property: 'og:url', name: 'og:url', content: 'https://resource-council.vercel.app/volunteer' },
+            { hid: 'og:title', property: 'og:title', name: 'og:title', content: 'Volunteer | Resource Council' },
+            { hid: 'og:description', property: 'og:description', name: 'og:description', content: 'Dear Volunteers, Thank you for considering getting involved with us. Please fill the following form. We welcome you to our family!' },
+            { hid: 'og:image', property: 'og:image', name: 'og:image', content: 'https://images.unsplash.com/photo-1578357078586-491adf1aa5ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80' },
+            { hid: 'twitter:title', property: 'twitter:title', name: 'twitter:title', content: 'Volunteer | Resource Council' },
+            { hid: 'twitter:description', property: 'twitter:description', name: 'twitter:description', content: 'Dear Volunteers, Thank you for considering getting involved with us. Please fill the following form. We welcome you to our family!' },
+            { hid: 'twitter:image', property: 'twitter:image', name: 'twitter:image', content: 'https://images.unsplash.com/photo-1578357078586-491adf1aa5ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80' }
+        ]
     }
 }
 </script>

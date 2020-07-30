@@ -4,7 +4,9 @@
     <Cover cDesc='Human resources is a huge part of what makes businesses work.' page-desc="Resource Talks" image="https://images.unsplash.com/photo-1500829243541-74b677fecc30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80" />
     <div class="container">
       <div class="d-flex flex-column align-items-center">
-        <nuxt-link v-for="(blog, i) in posts" :key="i" :to="&quot;/resource-talks/&quot;+blog.slug" v-bind:class="i==0 ? '' : 'mt-5'" class="px-md-5 col-lg-9 d-flex flex-column flex-md-row">
+        <h2 class="text-dark mt-3 mb-4">Title 1</h2>
+        <video controls autoplay poster="" src="/R%20Karpagam%20Resource%20Talk.mp4" class="shadow rounded-lg w-100"></video>
+        <!-- <nuxt-link v-for="(blog, i) in posts" :key="i" :to="&quot;/resource-talks/&quot;+blog.slug" v-bind:class="i==0 ? '' : 'mt-5'" class="px-md-5 col-lg-9 d-flex flex-column flex-md-row">
           <div v-bind:class="i%2!=0 ? 'order-lg-1' : 'order-lg-0'" class="order-0 col-lg-9">
             <img class="w-100 rounded-top" :src="blog.image1">
           </div>
@@ -46,7 +48,7 @@
               </span>
             </div>
           </div>
-        </nuxt-link>
+        </nuxt-link> -->
       </div>
     </div>
     <Footer class="mt-5" />
@@ -74,8 +76,13 @@ export default {
     return {
       title: 'Resource Talks | Resource Council',
       meta: [
-        { hid: 'description', name: 'description', content: 'Resource Talks | Resource Council' },
-        { hid: 'og:description', name: 'og:description', content: 'Resource Talks | Resource Council' }
+        { hid: 'og:url', property: 'og:url', name: 'og:url', content: 'https://resource-council.vercel.app/resource-talks' },
+        { hid: 'og:title', property: 'og:title', name: 'og:title', content: 'Resource Talks | Resource Council' },
+        { hid: 'og:description', property: 'og:description', name: 'og:description', content: 'The environment is where we all meet; where we all have a mutual interest; it is the one thing all of us share. ~  Lady Bird Johnson' },
+        { hid: 'og:image', property: 'og:image', name: 'og:image', content: 'https://images.unsplash.com/photo-1500829243541-74b677fecc30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80' },
+        { hid: 'twitter:title', property: 'twitter:title', name: 'twitter:title', content: 'Resource Talks | Resource Council' },
+        { hid: 'twitter:description', property: 'twitter:description', name: 'twitter:description', content: 'The environment is where we all meet; where we all have a mutual interest; it is the one thing all of us share. ~  Lady Bird Johnson' },
+        { hid: 'twitter:image', property: 'twitter:image', name: 'twitter:image', content: 'https://images.unsplash.com/photo-1500829243541-74b677fecc30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80' }
       ]
     }
   }

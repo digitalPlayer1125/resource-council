@@ -64,7 +64,14 @@
 <script>
 export default {
   head: {
-    title: 'Privacy Policy | Resource Council'
+    title: 'Privacy Policy | Resource Council',
+    meta: [
+      { hid: 'og:url', property: 'og:url', name: 'og:url', content: 'https://resource-council.vercel.app/privacy-policy' },
+      { hid: 'og:title', property: 'og:title', name: 'og:title', content: 'Privacy Policy | Resource Council' },
+      { hid: 'og:description', property: 'og:description', name: 'og:description', content: 'The environment is where we all meet; where we all have a mutual interest; it is the one thing all of us share. ~  Lady Bird Johnson' },
+      { hid: 'twitter:title', property: 'twitter:title', name: 'twitter:title', content: 'Privacy Policy | Resource Council' },
+      { hid: 'twitter:description', property: 'twitter:description', name: 'twitter:description', content: 'The environment is where we all meet; where we all have a mutual interest; it is the one thing all of us share. ~  Lady Bird Johnson' },
+    ]
   }
 }
 </script>

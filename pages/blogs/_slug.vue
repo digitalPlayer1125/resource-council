@@ -9,10 +9,8 @@
         <h5 class="mt-3 text-secondary">
           {{ article.intro }}
         </h5>
-        <img class="w-100 mt-4 rounded-lg shadow" :src="article.image1">
-        <h5 class="mt-5 text-secondary">
-          {{ article.description }}
-        </h5>
+        <!-- <img class="w-100 mt-4 rounded-lg shadow" :src="article.image1"> -->
+        <video controls autoplay poster="" src="/R%20Karpagam%20Resource%20Talk.mp4" class="rounded-lg w-100"></video>
         <nuxt-content class="mt-5" :document="article" />
         <div class="mt-5" style="/*background: #65656565; height: 0.5px;*/" />
         <span v-for="tags in article.tags.split(&quot;,&quot;)" :key="tags" style="font-size: 15px;" class="btn btn-md border rounded-lg mr-2 text-muted">
@@ -75,6 +73,7 @@ export default {
 <style>
   .blogContent > *{
     line-height: 1.7 !important;
-    color: #6c757d;
+    color: #343a40;
+    /* #6c757d; */
   }
 </style>
