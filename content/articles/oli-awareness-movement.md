@@ -1,9 +1,9 @@
 ---
-title: ''
+title: 'Oli Awareness Movement'
 author: 'Nivedit Mishra'
-intro: ''
-image1: 'https://www.thehindu.com/life-and-style/5e5rr4/article30106499.ece/BINARY/goats-drinking-from-the-pond'
-tags: ''
+intro: 'Dr R Karpagam is the founder of the Oli Awareness Movement, an environmental NGO based in Coimbatore, Tamil Nadu. She is also a teacher and has edited a monthly Tamil magazine called "Namathu Kural" which helped rural women learn about health, the environment and the English language. Her organization has worked for tree-plantation, water conservation and waste segregation.'
+image1: '/oli-awareness-movement.jpg'
+tags: 'Oli Awareness Movement, Karpagam, Coimbatore, Erumaalan Kuttai, environment, conservation, Resource Council'
 ---
 
 ### You are the founder of the Oli Awareness Movement, an environmental NGO. How did this movement come into existence and what was your motivation behind starting it?
@@ -56,7 +56,7 @@ environmentally conscious.
 
 ### We at Resource Council are most passionate about conserving or developing resources such that minimum wastage occurs. Thus, we were extremely inspired by your work in reviving the Erumaalan Kuttai -- a brilliant real-life example of water conservation. How did you go about reviving it?
 
-<img src="https://www.thehindu.com/life-and-style/5e5rr4/article30106499.ece/BINARY/goats-drinking-from-the-pond" class="my-4 w-100 rounded-lg">
+<img src="/oli-awareness-movement.jpg" class="my-4 w-100 rounded-lg">
 
 <h5 class="text-secondary" style="line-height: 1.7;">
 The Erulaaman Kuttai is a pond located in the foothills of Perumalmudi Hills. Choked by the

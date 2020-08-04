@@ -1,9 +1,11 @@
 <template>
   <div class="d-flex flex-column">
     <Header />
-    <Cover cDesc='“Today a reader, tomorrow a leader.” – Margaret Fuller' page-desc="Blogs" image="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" />
-    <div class="container">
-      <div class="d-flex flex-column align-items-center">
+    <Cover cDesc='“Today a reader, tomorrow a leader.” – Margaret Fuller' page-desc="Blogs" image="/blogs.jpg" />
+    <div class="container" style="overflow-x: hidden !important; position: relative;">
+      <img src="/polyLight.png" style="position: absolute; top: 0; right: 0; height: 350px;">
+      <img src="/polyLight.png" style="position: absolute; left: 0; bottom: 0; height: 350px;">
+      <div class="my-5 d-flex flex-column align-items-center">
         <nuxt-link v-for="(blog, i) in posts" :key="i" :to="&quot;/blogs/&quot;+blog.slug" v-bind:class="i==0 ? '' : 'hideme mt-5'" class="px-md-5 col-lg-9 d-flex flex-column flex-md-row">
           <div v-bind:class="i%2!=0 ? 'order-lg-1' : 'order-lg-0'" class="order-0 col-lg-9">
             <img class="w-100 rounded-lg" :src="blog.image1">
@@ -22,7 +24,7 @@
                 {{ blog.intro }}
               </p>
               <div class="d-block d-lg-none mt-auto d-flex flex-row flex-wrap">
-                <span v-for="tags in blog.tags.split(&quot;,&quot;)" :key="tags" style="font-size: 13px;" class="btn btn-md border rounded-lg mr-2 text-muted">
+                <span v-for="tags in blog.tags.split(&quot;,&quot;).slice(0, 2)" :key="tags" style="font-size: 13px;" class="btn btn-md border rounded-lg m-2 text-muted">
                   {{ tags.trim() }}
                 </span>
               </div>
@@ -41,7 +43,7 @@
               {{ blog.intro }}
             </p>
             <div class="mt-auto d-flex flex-row flex-wrap">
-              <span v-for="tags in blog.tags.split(&quot;,&quot;)" :key="tags" style="font-size: 13px;" class="btn btn-md border rounded-lg mr-2 text-muted">
+              <span v-for="tags in blog.tags.split(&quot;,&quot;).slice(0, 2)" :key="tags" style="font-size: 13px;" class="btn btn-md border rounded-lg m-1 text-muted">
                 {{ tags.trim() }}
               </span>
             </div>
@@ -75,13 +77,14 @@ export default {
     return {
       title: 'Blogs | Resource Council',
       meta: [
+        { hid: 'description', property: 'description', name: 'description', content: 'The environment is where we all meet; where we all have a mutual interest; it is the one thing all of us share. ~  Lady Bird Johnson' },
         { hid: 'og:url', property: 'og:url', name: 'og:url', content: 'https://resource-council.vercel.app/blogs' },
         { hid: 'og:title', property: 'og:title', name: 'og:title', content: 'Blogs | Resource Council' },
         { hid: 'og:description', property: 'og:description', name: 'og:description', content: 'The environment is where we all meet; where we all have a mutual interest; it is the one thing all of us share. ~  Lady Bird Johnson' },
-        { hid: 'og:image', property: 'og:image', name: 'og:image', content: 'https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80' },
+        { hid: 'og:image', property: 'og:image', name: 'og:image', content: 'https://resource-council.vercel.app/blogs.jpg' },
         { hid: 'twitter:title', property: 'twitter:title', name: 'twitter:title', content: 'Blogs | Resource Council' },
         { hid: 'twitter:description', property: 'twitter:description', name: 'twitter:description', content: 'The environment is where we all meet; where we all have a mutual interest; it is the one thing all of us share. ~  Lady Bird Johnson' },
-        { hid: 'twitter:image', property: 'twitter:image', name: 'twitter:image', content: 'https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80' }
+        { hid: 'twitter:image', property: 'twitter:image', name: 'twitter:image', content: 'https://resource-council.vercel.app/blogs.jpg' }
       ]
     }
   },
@@ -123,7 +126,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

@@ -10,10 +10,10 @@
           {{ article.intro }}
         </h5>
         <!-- <img class="w-100 mt-4 rounded-lg shadow" :src="article.image1"> -->
-        <video controls autoplay poster="" src="/R%20Karpagam%20Resource%20Talk.mp4" class="rounded-lg w-100"></video>
+        <video controls autoplay src="https://drive.google.com/uc?export=download&id=1MHriwptcrPe3Xl7oX2WuXk_fJ4q935eV" class="mt-3 rounded-lg w-100"></video>
         <nuxt-content class="mt-5" :document="article" />
         <div class="mt-5" style="/*background: #65656565; height: 0.5px;*/" />
-        <span v-for="tags in article.tags.split(&quot;,&quot;)" :key="tags" style="font-size: 15px;" class="btn btn-md border rounded-lg mr-2 text-muted">
+        <span v-for="tags in article.tags.split(&quot;,&quot;)" :key="tags" style="font-size: 15px;" class="btn btn-md border rounded-lg m-2 text-muted">
           {{ tags.trim() }}
         </span>
         <h4 class="ml-2 mt-5 text-dark" v-if='prev || next'> Read more from our curated collection </h4>
@@ -62,8 +62,14 @@ export default {
     return {
       title: this.article.title,
       meta: [
-        { hid: 'description', name: 'description', content: this.article.intro },
-        { hid: 'og:description', name: 'og:description', content: this.article.intro }
+        { hid: 'description', property: 'description', name: 'description', content: this.article.intro },
+        { hid: 'og:url', property: 'og:url', name: 'og:url', content: 'https://resource-council.vercel.app/blogs/' + this.article.slug },
+        { hid: 'og:title', property: 'og:title', name: 'og:title', content: this.article.title },
+        { hid: 'og:description', property: 'og:description', name: 'og:description', content: this.article.intro },
+        { hid: 'og:image', property: 'og:image', name: 'og:image', content: 'https://resource-council.vercel.app' + this.article.image1 },
+        { hid: 'twitter:title', property: 'twitter:title', name: 'twitter:title', content: this.article.title },
+        { hid: 'twitter:description', property: 'twitter:description', name: 'twitter:description', content: this.article.intro },
+        { hid: 'twitter:image', property: 'twitter:image', name: 'twitter:image', content: 'https://resource-council.vercel.app' + this.article.image1 }
       ]
     }
   }
@@ -74,6 +80,5 @@ export default {
   .blogContent > *{
     line-height: 1.7 !important;
     color: #343a40;
-    /* #6c757d; */
   }
 </style>

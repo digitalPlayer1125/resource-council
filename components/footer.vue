@@ -101,7 +101,7 @@
             </li>
             <li class="mb-3">
               <nuxt-link class="text-dark f_400" to="/help-us">
-                Support Us
+                Help Us
               </nuxt-link>
             </li>
             <li class="mb-0">

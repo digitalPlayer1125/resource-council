@@ -1,11 +1,13 @@
 <template>
   <div class="d-flex flex-column">
     <Header />
-    <Cover cDesc='Human resources is a huge part of what makes businesses work.' page-desc="Resource Talks" image="https://images.unsplash.com/photo-1500829243541-74b677fecc30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80" />
+    <Cover cDesc='“Nature is not a place to visit. It is home.” ~ Gary Snyder' page-desc="Resource Talks" image="/zero-waste-1.jpg" />
     <div class="container">
       <div class="d-flex flex-column align-items-center">
-        <h2 class="text-dark mt-3 mb-4">Title 1</h2>
-        <video controls autoplay poster="" src="/R%20Karpagam%20Resource%20Talk.mp4" class="shadow rounded-lg w-100"></video>
+        <h2 class="text-dark mt-3 mb-4">Oli Awareness Movement</h2>
+        <video controls autoplay class="shadow rounded-lg w-100">
+          <source src="https://drive.google.com/uc?export=download&id=1MHriwptcrPe3Xl7oX2WuXk_fJ4q935eV" type="video/mp4">
+        </video>
         <!-- <nuxt-link v-for="(blog, i) in posts" :key="i" :to="&quot;/resource-talks/&quot;+blog.slug" v-bind:class="i==0 ? '' : 'mt-5'" class="px-md-5 col-lg-9 d-flex flex-column flex-md-row">
           <div v-bind:class="i%2!=0 ? 'order-lg-1' : 'order-lg-0'" class="order-0 col-lg-9">
             <img class="w-100 rounded-top" :src="blog.image1">
@@ -76,19 +78,16 @@ export default {
     return {
       title: 'Resource Talks | Resource Council',
       meta: [
+        { hid: 'description', property: 'description', name: 'description', content: 'We bring to you people who have contributed tremendously towards better resource utilization and management.' },
         { hid: 'og:url', property: 'og:url', name: 'og:url', content: 'https://resource-council.vercel.app/resource-talks' },
         { hid: 'og:title', property: 'og:title', name: 'og:title', content: 'Resource Talks | Resource Council' },
-        { hid: 'og:description', property: 'og:description', name: 'og:description', content: 'The environment is where we all meet; where we all have a mutual interest; it is the one thing all of us share. ~  Lady Bird Johnson' },
-        { hid: 'og:image', property: 'og:image', name: 'og:image', content: 'https://images.unsplash.com/photo-1500829243541-74b677fecc30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80' },
+        { hid: 'og:description', property: 'og:description', name: 'og:description', content: 'We bring to you people who have contributed tremendously towards better resource utilization and management.' },
+        { hid: 'og:image', property: 'og:image', name: 'og:image', content: 'https://resource-council.vercel.app/zero-waste-1.jpg' },
         { hid: 'twitter:title', property: 'twitter:title', name: 'twitter:title', content: 'Resource Talks | Resource Council' },
-        { hid: 'twitter:description', property: 'twitter:description', name: 'twitter:description', content: 'The environment is where we all meet; where we all have a mutual interest; it is the one thing all of us share. ~  Lady Bird Johnson' },
-        { hid: 'twitter:image', property: 'twitter:image', name: 'twitter:image', content: 'https://images.unsplash.com/photo-1500829243541-74b677fecc30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80' }
+        { hid: 'twitter:description', property: 'twitter:description', name: 'twitter:description', content: 'We bring to you people who have contributed tremendously towards better resource utilization and management.' },
+        { hid: 'twitter:image', property: 'twitter:image', name: 'twitter:image', content: 'https://resource-council.vercel.app/zero-waste-1.jpg' }
       ]
     }
   }
 }
 </script>
-
-<style>
-
-</style>

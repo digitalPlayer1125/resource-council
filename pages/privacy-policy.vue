@@ -2,7 +2,7 @@
   <div class="text-muted d-flex flex-column">
     <Header />
     <div class="container p-3">
-      <h1 class="text--green">
+      <h1 class="mt-3 text--green">
         Privacy Policy for Resource Council
       </h1>
       <p>At Resource Council'20, accessible from https://resourcecouncil.org/, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Resource Council'20 and how we use it.</p>
@@ -66,6 +66,7 @@ export default {
   head: {
     title: 'Privacy Policy | Resource Council',
     meta: [
+      { hid: 'description', property: 'description', name: 'description', content: 'The environment is where we all meet; where we all have a mutual interest; it is the one thing all of us share. ~  Lady Bird Johnson' },
       { hid: 'og:url', property: 'og:url', name: 'og:url', content: 'https://resource-council.vercel.app/privacy-policy' },
       { hid: 'og:title', property: 'og:title', name: 'og:title', content: 'Privacy Policy | Resource Council' },
       { hid: 'og:description', property: 'og:description', name: 'og:description', content: 'The environment is where we all meet; where we all have a mutual interest; it is the one thing all of us share. ~  Lady Bird Johnson' },
